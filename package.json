@@ -1,0 +1,9 @@
+{
+  "name": "bali-travel-manual",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bash scripts/build-site.sh"
+  }
+}

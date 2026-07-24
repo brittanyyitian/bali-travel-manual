@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>巴厘岛路线手册</title>
+    <link rel="stylesheet" href="./styles.css?v=ui-v14-i18n" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <span class="brand-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <rect x="6" y="4" width="12" height="16" rx="4"></rect>
+              <path d="M10 8.5h4"></path>
+              <path d="M10 12l1.8 1.8L15 10"></path>
+            </svg>
+          </span>
+          <h1 data-i18n="巴厘岛路线手册">巴厘岛路线手册</h1>
+          <button class="topbar-add" type="button" aria-label="新增">+</button>
+        </div>
+        <div class="topbar-actions" aria-label="页面操作">
+          <div class="language-toggle" id="languageToggle" aria-label="语言切换">
+            <button type="button" data-lang="zh" aria-pressed="true">中文</button>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+          <button type="button" aria-label="分享">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="18" cy="5" r="2.5"></circle>
+              <circle cx="6" cy="12" r="2.5"></circle>
+              <circle cx="18" cy="19" r="2.5"></circle>
+              <path d="M8.4 10.9l7.2-4.8"></path>
+              <path d="M8.4 13.1l7.2 4.8"></path>
+            </svg>
+          </button>
+          <button type="button" aria-label="更多">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="6" cy="12" r="1.7"></circle>
+              <circle cx="12" cy="12" r="1.7"></circle>
+              <circle cx="18" cy="12" r="1.7"></circle>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <main class="manual-grid">
+        <section class="trip-summary-card" aria-label="行程总览">
+          <span class="summary-label">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 21s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"></path>
+              <circle cx="12" cy="9" r="2.5"></circle>
+            </svg>
+            <span data-i18n="行程总览">行程总览</span>
+          </span>
+          <h2>9/29 - 10/6</h2>
+          <p data-i18n="8 天 7 晚 · 巴厘岛 + 东爪哇">8 天 7 晚 · 巴厘岛 + 东爪哇</p>
+        </section>
+
+        <section class="overview-panel" id="overviewPanel" aria-label="目的地总览"></section>
+
+        <section class="day-rail" aria-label="八天七晚路线和接送">
+          <div class="section-heading compact">
+            <p>Daily</p>
+            <h2 data-i18n="每日行程">每日行程</h2>
+          </div>
+          <div id="phasePanel"></div>
+          <div class="rail-total" aria-label="行程统计">
+            <span data-i18n="总里程约 720km">总里程约 720km</span>
+            <span data-i18n="车船约 27h">车船约 27h</span>
+          </div>
+        </section>
+
+        <section class="route-column" aria-label="当天路线">
+          <section class="route-board">
+            <div class="route-board-header" id="routeHeader"></div>
+            <div id="routeMapSlot"></div>
+            <div id="spatialRoute"></div>
+          </section>
+        </section>
+
+        <section class="cost-column" aria-label="当天判断和可能支出">
+          <div id="todayStatus"></div>
+          <div id="budgetPanel"></div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="./data.js?v=ui-v14-i18n"></script>
+    <script src="./app.js?v=ui-v14-i18n"></script>
+  </body>
+</html>
